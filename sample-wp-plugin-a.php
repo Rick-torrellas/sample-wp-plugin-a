@@ -3,7 +3,7 @@
 /**
 * @package wp plugin basic
 * Plugin Name: sample-wp-plugin-a
-* Description: El plugin mas basico.
+* Description: El plugin mas basico. con programacion funcional.
 */
 
 /*
@@ -30,6 +30,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+defined('ABSPATH') or die('Hey, you can\t access this file, you silly human!');
+
+if ( ! function_exists('add_action')) {
+    echo 'Hey, you can\t access this file, you silly human!';
+    die;
+}
 
 function plugin_basic_activate_plugin() {
     flush_rewrite_rules();
